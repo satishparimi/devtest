@@ -5,6 +5,10 @@ import TaskManager from './Components/TaskManager/TaskManager';
 import WebElements from './Components/WebElements/WebElements'
 
 class App extends Component {
+ 
+  loginHandler = (event) =>{
+    alert('logged in sucessfully');
+  } 
   render() {
     return (
       <div >
@@ -14,7 +18,7 @@ class App extends Component {
         </header> */}
         
         <TaskManager/>
-        <WebElements/>
+        <WebElements clicked={(event) =>this.loginHandler(event)}/>
       </div>
     );
   }
