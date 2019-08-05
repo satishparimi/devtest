@@ -1,4 +1,6 @@
 .Task{
-    width: 60%;
-    color: red;
+    width: 100%;
+    color: blue;
+    text-align: center;
+    font-weight: bold;
 }
