@@ -1,25 +1,50 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import {BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import './App.css';
+import LoginPage from './Components/LoginPage/LoginPage'
+import HomePage from './Components/HomePage/HomePage';
 import TaskManager from './Components/TaskManager/TaskManager';
-import WebElements from './Components/WebElements/WebElements'
+import Error from './Components/ErrorHandling/Error';
+import Navigation from './Components/Navigation/Navigation';
 
 class App extends Component {
  
   loginHandler = (event) =>{
     alert('logged in sucessfully');
   } 
+
   render() {
+
     return (
-      <div >
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header> */}
-        
-        <TaskManager/>
-        <WebElements clicked={(event) =>this.loginHandler(event)}/>
-      </div>
+
+
+      <BrowserRouter>
+
+        <div>
+
+          <Navigation 
+          
+          />
+
+          <Switch>
+            
+            <Route path="/" component={LoginPage} exact />
+
+            <Route path="/home" component={HomePage} />
+
+            <Route path="/task" component={TaskManager} />
+
+            <Route component={Error}/>
+
+          </Switch>
+          
+        </div>
+
+
+      </BrowserRouter>
+
     );
   }
 }
