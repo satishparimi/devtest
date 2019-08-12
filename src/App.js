@@ -15,18 +15,33 @@ class App extends Component {
     alert('logged in sucessfully');
   } 
 
+
+
+  navHandler = (event) =>{
+    
+   return(
+     
+     <div>
+        <Route path="/home" component={HomePage} exact />
+      </div>
+    
+  );
+    
+  }
+  
+  
+
   render() {
+
 
     return (
 
 
       <BrowserRouter>
 
-        <div>
+        <div> 
 
-          <Navigation 
-          
-          />
+          <Navigation />
 
           <Switch>
             
@@ -39,7 +54,10 @@ class App extends Component {
             <Route component={Error}/>
 
           </Switch>
+
+        
           
+
         </div>
 
 

@@ -1,4 +1,17 @@
 .LoginForm{
     text-align: center;
     color: red;
+    line-height: 2;
+}
+
+.footer{
+    position: fixed;
+    padding: 10px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: gray;
+   color: white;
+   text-align: cener;
+    
 }

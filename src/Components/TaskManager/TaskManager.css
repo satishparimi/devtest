@@ -3,4 +3,15 @@
     color: green;
     text-align: center;
     font-weight: bold;
+    align-content: center;
 }
+
+.LoginForm{
+    line-height: 2;
+    font-family: sans-serif;
+}
+
+.Textarea {
+    width: 300px;
+    height: 150px;
+  }
